@@ -8,6 +8,8 @@ Here I will gather all my go-to commands / templates / copy pastes / code syntax
 2. [Lucrae @ github django-cheat-sheet](https://github.com/lucrae/django-cheat-sheet)
 
 # Admin
+[Django Admin Cookbook - How to set ordering of apps in admin-dashboard](https://books.agiliq.com/projects/django-admin-cookbook/en/latest/set_ordering.html)
+
 
 # Models
 ## Django ORM optimization
