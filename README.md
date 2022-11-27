@@ -12,6 +12,13 @@ Here I will gather all my go-to commands / templates / copy pastes / code syntax
 
 
 # Models
+
+## Fixtures
+Best practice is to always create fixture without contenttypes and authpermissions.
+```python
+python manage.py dumpdata --natural-foreign --natural-primary -e contenttypes -e auth.Permission --indent 4 > dump.json
+```
+
 ## Django ORM optimization
 gist from [levidyrek @ github](https://gist.github.com/levidyrek/6db1cf88b953f3f006bf678a0f09da8e)
 ```python
