@@ -12,7 +12,7 @@ Following guide [Guide on Digitcalocean](https://www.digitalocean.com/community/
 
 ```sh
 sudo apt update
-sudo apt install python3-venv python3-dev libpq-dev postgresql postgresql-contrib nginx curl
+sudo apt install python3-venv python3-dev libpq-dev postgresql postgresql-contrib nginx curl git
 ```
 `sudo -u postgres psql`
 
@@ -26,6 +26,21 @@ ALTER ROLE mdb SET default_transaction_isolation TO 'read committed';
 ALTER ROLE mdb SET timezone TO 'UTC';
 
 GRANT ALL PRIVILEGES ON DATABASE mdb TO mdb;
+```
+
+```sh
+ssh-keygen
+# Fix authorized keys
+mkdir mdb
+cd mdb
+python3 -m venv venv
+source venv/bin/activate
+# Fix github key access
+git clone git@github.com:arvidjohansen/django-snippets.git
+cd django-snippets
+pip install -r requirements.txt
+# ./manage.py runserver if you want, but dont forget ufw allow 8k
+# Rdy for Nginx
 ```
 
 
