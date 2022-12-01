@@ -7,6 +7,29 @@ Here I will gather all my go-to commands / templates / copy pastes / code syntax
 1. [Eric the coder - My beloved Django cheat sheet](https://dev.to/ericchapman/my-beloved-django-cheat-sheet-2056)
 2. [Lucrae @ github django-cheat-sheet](https://github.com/lucrae/django-cheat-sheet)
 
+# Full installation on Debian 11.5 w Nginx Gunicorn Postgres
+Following guide [Guide on Digitcalocean](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-22-04)
+
+```sh
+sudo apt update
+sudo apt install python3-venv python3-dev libpq-dev postgresql postgresql-contrib nginx curl
+```
+`sudo -u postgres psql`
+
+Script to create db, user, give acces and set some tuning parameters:
+```sql
+CREATE DATABASE mdb;
+CREATE USER mdb WITH PASSWORD 'MyPAsswordInTheFace1';
+
+ALTER ROLE mdb SET client_encoding TO 'utf8';
+ALTER ROLE mdb SET default_transaction_isolation TO 'read committed';
+ALTER ROLE mdb SET timezone TO 'UTC';
+
+GRANT ALL PRIVILEGES ON DATABASE mdb TO mdb;
+```
+
+
+
 # Admin
 [Django Admin Cookbook - How to set ordering of apps in admin-dashboard](https://books.agiliq.com/projects/django-admin-cookbook/en/latest/set_ordering.html)
 
