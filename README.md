@@ -43,6 +43,12 @@ pip install -r requirements.txt
 # Rdy for Nginx
 ```
 
+## Or with apache instead:
+https://gist.github.com/Kyle-Koivukangas/9f6627b03c2d80ecb4b4f722ea26da35
+https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/modwsgi/
+
+
+
 
 
 # Admin
